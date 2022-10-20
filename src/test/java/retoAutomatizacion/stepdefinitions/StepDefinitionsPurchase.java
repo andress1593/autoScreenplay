@@ -24,7 +24,7 @@ public class StepDefinitionsPurchase {
 
     @When("he selects a category and a product and adds them to the cart to complete the purchase")
     public void heSelectsACategoryAndAProductAndAddsThemToTheCartToCompleteThePurchase() {
-        OnStage.theActorInTheSpotlight().attemptsTo(Login.enterPage(), Purchase.buyProduct());
+        //OnStage.theActorInTheSpotlight().attemptsTo(Login.enterPage(data), Purchase.buyProduct());
     }
 
     @Then("he finalizes the purchase and gets the product")

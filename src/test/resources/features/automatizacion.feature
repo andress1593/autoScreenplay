@@ -8,12 +8,16 @@ Feature: Register
   Scenario: User register
     Given that Andres wants to register on the Product Store page
     When he finds a registration form where he must fill out the information
+      | username   | password |
+      | camilo3254 | 1234*    |
     Then he can log in the page
 
   @login
   Scenario: Log in Product Store
     Given that Andres wants to log in to the Product Store Page
     When he enters his credentials in the login form
+      | username   | password |
+      | andress1593 | 1234*   |
     Then he can navigate with his account
 
   @purchase

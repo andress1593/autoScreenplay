@@ -19,4 +19,8 @@ public class LoginForm {
     public static final Target LOGIN_SUBMIT = Target
             .the("button to send the credentials")
             .located(By.xpath("//*[@id=\"logInModal\"]/div/div/div[3]/button[2]"));
+
+    public static final Target WELCOME_MESSAGE = Target
+            .the("welcome message on the page")
+            .located(By.id("nameofuser"));
 }
