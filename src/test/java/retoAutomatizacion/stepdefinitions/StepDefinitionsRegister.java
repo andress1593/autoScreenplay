@@ -9,7 +9,6 @@ import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.questions.WebElementQuestion;
-import retoAutomatizacion.model.ModelData;
 import retoAutomatizacion.tasks.Login;
 import retoAutomatizacion.tasks.OpenPage;
 import retoAutomatizacion.tasks.RegisterUser;
@@ -17,6 +16,7 @@ import retoAutomatizacion.tasks.RegisterUser;
 import java.util.List;
 import java.util.Map;
 
+import static net.serenitybdd.core.Serenity.getDriver;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isCurrentlyVisible;
 import static retoAutomatizacion.userinterface.LoginForm.WELCOME_MESSAGE;
 

@@ -1,5 +1,6 @@
 package retoAutomatizacion.stepdefinitions;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,6 +10,9 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import retoAutomatizacion.tasks.Login;
 import retoAutomatizacion.tasks.OpenPage;
 import retoAutomatizacion.tasks.Purchase;
+
+import java.util.List;
+import java.util.Map;
 
 public class StepDefinitionsPurchase {
 
@@ -23,8 +27,9 @@ public class StepDefinitionsPurchase {
     }
 
     @When("he selects a category and a product and adds them to the cart to complete the purchase")
-    public void heSelectsACategoryAndAProductAndAddsThemToTheCartToCompleteThePurchase() {
-        //OnStage.theActorInTheSpotlight().attemptsTo(Login.enterPage(data), Purchase.buyProduct());
+    public void heSelectsACategoryAndAProductAndAddsThemToTheCartToCompleteThePurchase(DataTable data) {
+        List<Map<String, String>> newlista = data.asMaps();
+        OnStage.theActorInTheSpotlight().attemptsTo(Login.enterPage(newlista), Purchase.buyProduct(newlista));
     }
 
     @Then("he finalizes the purchase and gets the product")
