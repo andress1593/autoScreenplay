@@ -3,6 +3,7 @@ package retoAutomatizacion.tasks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import retoAutomatizacion.userinterface.Shopping;
 
@@ -23,7 +24,9 @@ public class Purchase implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
+        actor.attemptsTo(Click.on(Shopping.BUTTON_ADDCART), AlertModal.accept(),
+                Click.on(Shopping.OPTIONS_CART),
+                Click.on(Shopping.PLACE_ORDER),
                 Enter.theValue(data.get(0).get("name")).into(Shopping.INPUT_NAME),
                 Enter.theValue(data.get(0).get("country")).into(Shopping.INPUT_COUNTRY),
                 Enter.theValue(data.get(0).get("city")).into(Shopping.INPUT_CITY),
@@ -31,6 +34,5 @@ public class Purchase implements Task {
                 Enter.theValue(data.get(0).get("month")).into(Shopping.INPUT_MONTH),
                 Enter.theValue(data.get(0).get("year")).into(Shopping.INPUT_YEAR)
         );
-        //Click.on(driver.findElement(By.linkText("Phones")))
     }
 }

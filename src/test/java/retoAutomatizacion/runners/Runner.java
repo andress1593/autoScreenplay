@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features/automatizacion.feature",
-        tags = "@login",
+        tags = "@purchase",
         glue = "retoAutomatizacion.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )

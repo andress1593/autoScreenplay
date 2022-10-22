@@ -5,6 +5,14 @@ import org.openqa.selenium.By;
 
 public class Shopping {
 
+    public static final Target LIST_CATEGORY = Target
+            .the("category list")
+            .locatedBy("//div[@class='list-group']//a[contains(text(),'{0}')]");
+
+    public static final Target LIST_PRODUCTS = Target
+            .the("product list")
+            .locatedBy("//h4[@class='card-title']//a[contains(text(),'{0}')]");
+
     public static final Target BUTTON_ADDCART = Target
             .the("add to cart button")
             .located(By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a"));
@@ -45,7 +53,13 @@ public class Shopping {
             .the("button to confirm the purchase")
             .located(By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]"));
 
+    public static final Target THANK_MESSAGE = Target
+            .the("final message")
+            .located(By.xpath("/html/body/div[10]/h2"));
+
     public static final Target BUTTON_CONFIRMATION = Target
             .the("button close the purchase confirmation")
             .located(By.xpath("/html/body/div[10]/div[7]/div/button"));
+
+
 }

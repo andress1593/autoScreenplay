@@ -9,7 +9,6 @@ import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.questions.WebElementQuestion;
-import retoAutomatizacion.model.ModelData;
 import retoAutomatizacion.tasks.Login;
 import retoAutomatizacion.tasks.OpenPage;
 
